@@ -4,6 +4,7 @@ import { ProgressBar } from '../comps/ProgressBar';
 import { Switch, TextField } from '@mui/material';
 import { Contact } from '../comps/Contact';
 import me from '../../assets/contactsIcons/maincontact.png'
+import Dropdown from '../comps/Dropdown';
 
 export const StartedGoal = ({title='Title', date='2023-12-12', current, goal=0, daily=0, members=[], progress=10, showWinner=false}) => {
   const [newDate, setNewDate] = useState('');
@@ -74,10 +75,17 @@ export const StartedGoal = ({title='Title', date='2023-12-12', current, goal=0, 
           <p>Descontar de Displonible</p>
           <Switch />
         </div>
+        {/*
         <div className='rounded-xl w-full bg-[#F4F4F4] mt-4 py-[8px] px-[14px]'>
-          <p className='text-[#2FCAD7] text-[11px]'>Diario</p>
+          <p className='text-[#2FCAD7] text-[11px]'>Aporta al grupo</p>
           <p className='font-semibold text-[#1D0145]'>$ {daily}</p>
         </div>
+      */}
+      <div className="App">
+        
+        <Dropdown />
+      </div>
+        
         {showWinner &&
           <div className='flex flex-col items-center gap-3 text-center'>
             <div className='rounded-full w-[99px] h-[99px] shadow-xl flex items-center justify-center'>
