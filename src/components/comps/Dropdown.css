@@ -1,0 +1,20 @@
+.dropdown-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F4F4F4;
+    border-radius: 8px;
+    width: 100%;
+    margin-top: 16px;
+    padding: 10px;
+  }
+  
+  .dropdown-label {
+    color: #8F8F8F;
+  }
+  
+  .dropdown-select {
+    padding: 8px;
+    background-color: transparent ;
+    border-radius: 4px;
+  }

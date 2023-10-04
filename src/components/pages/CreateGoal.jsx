@@ -1,5 +1,6 @@
 import { Switch, TextField } from "@mui/material"
 import { ImageCard } from "../comps/ImageCard"
+import Dropdown from '../comps/Dropdown';
 
 export const CreateGoal = ({participants = [], handleChangeTitle, title, handleChangeDaily, handleChangeDate, handleChangeAmount}) => {
   return(
@@ -45,6 +46,7 @@ export const CreateGoal = ({participants = [], handleChangeTitle, title, handleC
           <p>Descontar de Displonible</p>
           <Switch />
         </div>
+        {/*
         <TextField 
           label="Diario" 
           variant="outlined" 
@@ -58,6 +60,7 @@ export const CreateGoal = ({participants = [], handleChangeTitle, title, handleC
             borderRadius: '8px',
           }}
         />
+        */}
       </div>
     </div>
   )

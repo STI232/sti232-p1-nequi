@@ -21,6 +21,8 @@ import { CreationDialog } from './components/pages/CreationDialog';
 import { GoalsPreview } from './components/pages/GoalsPreview';
 import { StartedGoal } from './components/pages/StartedGoal';
 import trash from './assets/trash.svg';
+import Dropdown from './components/comps/Dropdown';
+
 
 function App() {
   const [page, setPage] = useState(6);
@@ -102,7 +104,7 @@ function App() {
   const [progress, setProgress] = useState(0);
   const [showWinner, setShowWinner] = useState(false);
 
-  const [openDialog, setOpenDialog] = useState(false);
+  const [openDialog, setOpenDialog] = useState(false);  
 
   useEffect(() => {
     setProgress((currentAmount/goalAmount)*100)
@@ -203,6 +205,7 @@ function App() {
           nextPage={() => setOpenDialog(true)}
           buttonColor='pink'
         >
+        
           <CreateGoal 
             handleChangeTitle={handleChangeTitle} 
             handleChangeDaily={handleChangeDaily}
@@ -211,6 +214,7 @@ function App() {
             title={goalTitle} 
             participants={selectedContactList}
           />
+          <Dropdown />
           <CreationDialog open={openDialog} handleClose={handleClose} daily={goalDaily} continueFn={nextPage} date={goalDate}/>
         </BordersTemplate>
       }
